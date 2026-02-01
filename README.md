@@ -4,8 +4,8 @@
 
 ### [[Project Website](https://jbruner23.github.io/consistyle/)]
 
-> **ConsiStory: Training-Free Consistent Text-to-Image Generation**<br>
-> Yohai Mazuz<sup>1*</sup>, Janna Bruner<sup>1*</sup>, Lior Wolf<sup>1</sup> <br>
+> **ConsiStyle: Style Diversity in Training-Free Consistent T2I Generation**<br>
+> Yohai Mazuz<sup>1*</sup>, Janna Bruner<sup>1,2*</sup>, Lior Wolf<sup>1</sup> <br>
 > <sup>1</sup>Tel Aviv University, <sup>2</sup>Amazon<br>
 > <sup>\*</sup>Equal contribution
 
