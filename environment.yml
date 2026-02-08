@@ -1,4 +1,4 @@
-name: consistory
+name: consistent-image-gen
 channels:
   - pytorch
   - nvidia
