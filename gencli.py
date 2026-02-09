@@ -10,9 +10,9 @@ import argparse
 from run import load_pipeline, run_batch_generation, run_anchor_generation, run_extra_generation
 import torch
 
-def run_batch(gpu, float_type, seed=100, mask_dropout=0.5, same_latent=False,
-              style="A photo of ", subject="a cute dog", concept_token=['dog'], prompts=None,
-              out_dir = None, record_queries=False, invert=False, perform_feature_injection_bg_adain=False,
+def run_batch(gpu, float_type, seed=100, mask_dropout=0.5, same_latent=False,\
+                concept_token=['dog'], prompts=None,
+                out_dir = None, record_queries=False, invert=False, perform_feature_injection_bg_adain=False,
                 perform_consistory_injection=False, run_experiments=None, attn_v_range=[3,10], attn_qk_range=[5,15],
                 use_colab_folder_timestamp=True,
                 perform_original_sdxl=False,
@@ -21,7 +21,7 @@ def run_batch(gpu, float_type, seed=100, mask_dropout=0.5, same_latent=False,
                 perform_adain_ablation=False,
                 perform_no_dift_ablation=False):
     
-    print("Torch Cuda Available: ", torch.cuda.is_available())
+    print("Torch CUDA is available: ", torch.cuda.is_available())
     story_pipeline = load_pipeline(gpu, float_type)
     results = run_batch_generation(story_pipeline, 
                                     prompts, 
