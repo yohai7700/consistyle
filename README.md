@@ -15,10 +15,28 @@
 > In text-to-image models, consistent character generation is the task of achieving text alignment while maintaining the subject's appearance across different prompts. However, since style and appearance are often entangled, the existing methods struggle to preserve consistent subject characteristics while adhering to varying style prompts. Current approaches for consistent text-to-image generation typically rely on large-scale fine-tuning on curated image sets or per-subject optimization, which either fail to generalize across prompts or do not align well with textual descriptions. Meanwhile, training-free methods often fail to maintain subject consistency across different styles. In this work, we introduce a training-free method that, for the first time, jointly achieves style preservation and subject consistency across varied styles. The attention matrices are manipulated such that Queries and Keys are obtained from the anchor image(s) that are used to define the subject, while the Values are imported from a parallel copy that is not subject-anchored. Additionally, cross-image components are added to the self-attention mechanism by expanding the Key and Value matrices. To do without shifting from the target style, we align the statistics of the Value matrices. As is demonstrated in a comprehensive battery of qualitative and quantitative experiments, our method effectively decouples style from subject appearance and enables faithful generation of text-aligned images with consistent characters across diverse styles.
 
 ## Setup
+We recommend using the requirements.txt as such:
+```bash
+pip install -r requirements.txt
+```
 
+an environment YAML file as also been provided for conda usage:
 ```bash
 conda env create --file environment.yml
 ```
+
+## Execution
+```bash
+gpu=0
+float_type=16
+concept_token = ...
+run_batch(
+    gpu,
+    float_type,
+    prompts=[...],
+    concept_token=concept_token,
+    perform_styled_injection=True
+)```
 
 ## Nvidia License
 
